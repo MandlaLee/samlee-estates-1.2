@@ -275,3 +275,369 @@
     }
 
 }
+
+
+/* File: assets/css/contact.css */
+
+/* =========================================================
+   SAMLEE ESTATES
+   CONTACT PAGE STYLES
+========================================================= */
+
+
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.contact-intro-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 34px;
+    align-items: stretch;
+}
+
+.contact-intro-grid > div {
+    min-width: 0;
+}
+
+.contact-highlight-box {
+    background: var(--light, #F5F7FA);
+    border: 1px solid var(--border, #E2E8F0);
+    border-top: 6px solid var(--red, #A51C30);
+    padding: 30px;
+    box-shadow: var(--shadow-light, 0 8px 20px rgba(0,0,0,.06));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-highlight-box h3 {
+    color: var(--navy, #001F5B);
+    margin-bottom: 12px;
+}
+
+.contact-highlight-box p {
+    color: var(--text-light, #718096);
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TOP CONTACT CARDS
+========================================================= */
+
+.contact-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 34px;
+}
+
+.contact-card {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border, #E2E8F0);
+    border-top: 5px solid var(--red, #A51C30);
+    padding: 28px;
+    box-shadow: var(--shadow-light, 0 8px 20px rgba(0,0,0,.06));
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card h3 {
+    color: var(--navy, #001F5B);
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--text-light, #718096);
+    margin-bottom: 18px;
+}
+
+.contact-card strong {
+    color: var(--navy, #001F5B);
+}
+
+.contact-link {
+    display: block;
+    color: var(--navy, #001F5B);
+    font-weight: 900;
+    margin-top: 8px;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    color: var(--red, #A51C30);
+}
+
+
+/* =========================================================
+   CONTACT HOURS
+========================================================= */
+
+.contact-hours-box {
+    background: var(--navy, #001F5B);
+    color: var(--white, #ffffff);
+    padding: 34px;
+    margin-top: 34px;
+}
+
+.contact-hours-box h3 {
+    color: var(--white, #ffffff);
+    margin-bottom: 12px;
+}
+
+.contact-hours-box p {
+    color: rgba(255,255,255,.82);
+    margin-bottom: 18px;
+}
+
+.contact-hours-list {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-hours-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    padding-bottom: 12px;
+}
+
+.contact-hours-list div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-hours-list strong {
+    color: var(--white, #ffffff);
+    font-weight: 900;
+}
+
+.contact-hours-list span {
+    color: rgba(255,255,255,.82);
+    text-align: right;
+}
+
+
+/* =========================================================
+   SUPPORT DIRECTORY
+========================================================= */
+
+.directory-section {
+    background: var(--light, #F5F7FA);
+    padding: 76px 0;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.directory-card {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border, #E2E8F0);
+    border-left: 6px solid var(--red, #A51C30);
+    padding: 28px;
+    box-shadow: var(--shadow-light, 0 8px 20px rgba(0,0,0,.06));
+}
+
+.directory-card h3 {
+    color: var(--navy, #001F5B);
+    margin-bottom: 10px;
+}
+
+.directory-card p {
+    color: var(--text-light, #718096);
+    margin-bottom: 18px;
+}
+
+.directory-meta {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.directory-meta div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border, #E2E8F0);
+    font-size: 14px;
+}
+
+.directory-meta div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.directory-meta strong {
+    color: var(--navy, #001F5B);
+    font-weight: 900;
+    min-width: 90px;
+}
+
+.directory-meta span,
+.directory-meta a {
+    color: var(--text-light, #718096);
+    text-align: right;
+    font-weight: 800;
+    word-break: break-word;
+}
+
+.directory-meta a:hover {
+    color: var(--red, #A51C30);
+}
+
+
+/* =========================================================
+   PROPERTY CARETAKERS
+========================================================= */
+
+.caretaker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.caretaker-card {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border, #E2E8F0);
+    border-top: 5px solid var(--navy, #001F5B);
+    padding: 26px;
+    box-shadow: var(--shadow-light, 0 8px 20px rgba(0,0,0,.06));
+    display: flex;
+    flex-direction: column;
+}
+
+.caretaker-card h3 {
+    color: var(--navy, #001F5B);
+    margin-bottom: 10px;
+}
+
+.caretaker-card p {
+    color: var(--text-light, #718096);
+    margin-bottom: 18px;
+}
+
+.caretaker-label {
+    display: inline-block;
+    width: fit-content;
+    background: var(--light, #F5F7FA);
+    border: 1px solid var(--border, #E2E8F0);
+    color: var(--navy, #001F5B);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 7px 10px;
+    margin-bottom: 14px;
+}
+
+.caretaker-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.caretaker-actions a {
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESOURCE / FAQ SPACING FIXES FOR CONTACT PAGE
+========================================================= */
+
+.contact-page-gap-fix {
+    margin-top: 0;
+}
+
+.contact-page-gap-fix + section {
+    margin-top: 0;
+}
+
+.contact-card-grid,
+.directory-grid,
+.caretaker-grid,
+.resources-grid,
+.faq-grid {
+    align-items: stretch;
+}
+
+.contact-card,
+.directory-card,
+.caretaker-card {
+    min-width: 0;
+}
+
+.contact-card p:last-child,
+.directory-card p:last-child,
+.caretaker-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .contact-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card-grid,
+    .caretaker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .directory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hours-list div,
+    .directory-meta div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-hours-list span,
+    .directory-meta span,
+    .directory-meta a {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .contact-card-grid,
+    .caretaker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-highlight-box,
+    .contact-card,
+    .directory-card,
+    .caretaker-card,
+    .contact-hours-box {
+        padding: 22px;
+    }
+
+    .directory-section {
+        padding: 58px 0;
+    }
+
+}
