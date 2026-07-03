@@ -1,673 +1,1212 @@
+<!-- File: faq/index.html -->
+
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Student Accommodation FAQ | SamLee Estates</title>
-<meta content="Frequently asked questions about SamLee Estates student accommodation in Bloemfontein, including NSFAS accommodation, UFS accommodation, CUT accommodation, applications, safety, payments and parent questions." name="description"/>
-<meta content="student accommodation FAQ, SamLee Estates FAQ, NSFAS accommodation FAQ, UFS accommodation FAQ, CUT accommodation FAQ, Bloemfontein student accommodation questions" name="keywords"/>
 
-<link href="../assets/css/main.css" rel="stylesheet"/>
+<meta name="description"
+content="Frequently asked questions about SamLee Estates student accommodation in Bloemfontein near UFS and CUT. Get answers about applications, NSFAS accommodation, payments, facilities, safety, parents and student living.">
 
-<style>
+<meta name="keywords"
+content="student accommodation FAQ Bloemfontein, SamLee Estates FAQ, NSFAS accommodation FAQ, UFS accommodation questions, CUT accommodation questions, student housing FAQ">
 
-.faq-hub-intro {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 34px;
-    align-items: start;
-}
+<link rel="icon" href="../assets/images/favicon.ico">
 
-.faq-side-box {
-    background: var(--light);
-    border: 1px solid var(--border);
-    border-top: 6px solid var(--red);
-    padding: 30px;
-}
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/components.css">
 
-.faq-side-box h3 {
-    color: var(--navy);
-    margin-bottom: 12px;
-}
+<link rel="canonical"
+href="https://mandlalee.github.io/SamLee/faq/">
 
-.faq-side-box p {
-    color: var(--text-light);
-    margin-bottom: 16px;
-}
+</head>
 
-.faq-category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 28px;
-}
-
-.faq-category-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-top: 5px solid var(--red);
-    padding: 28px;
-    box-shadow: var(--shadow-light);
-}
-
-.faq-category-card h3 {
-    color: var(--navy);
-    margin-bottom: 10px;
-}
-
-.faq-category-card p {
-    color: var(--text-light);
-    margin-bottom: 18px;
-}
-
-.faq-light-section {
-    background: var(--light);
-    padding: 70px 0;
-}
-
-.faq-topic-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.faq-topic-item {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-left: 5px solid var(--red);
-    padding: 22px;
-}
-
-.faq-topic-item h3 {
-    color: var(--navy);
-    margin-bottom: 8px;
-}
-
-.faq-topic-item p {
-    color: var(--text-light);
-}
-
-.faq-search-box {
-    background: var(--navy);
-    color: var(--white);
-    padding: 32px;
-    margin-top: 30px;
-}
-
-.faq-search-box h3 {
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-.faq-search-box p {
-    color: rgba(255,255,255,.82);
-    margin-bottom: 18px;
-}
-
-@media (max-width: 1000px) {
-
-    .faq-category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .faq-hub-intro {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .faq-category-grid,
-    .faq-topic-list {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-</style>
-<link href="../assets/images/favicon.ico" rel="icon"/><link href="../assets/images/apple-touch-icon.png" rel="apple-touch-icon"/><link href="https://mandlalee.github.io/SamLee/faq/" rel="canonical"/><meta content="index, follow" name="robots"/><meta content="SamLee Estates" property="og:site_name"/><meta content="article" property="og:type"/><meta content="Student Accommodation FAQ | SamLee Estates" property="og:title"/><meta content="Frequently asked questions about SamLee Estates student accommodation in Bloemfontein, including NSFAS accommodation, UFS accommodation, CUT accommodation, applications, safety, payments and parent questions." property="og:description"/><meta content="https://mandlalee.github.io/SamLee/faq/" property="og:url"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" property="og:image"/><meta content="en_ZA" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Student Accommodation FAQ | SamLee Estates" name="twitter:title"/><meta content="Frequently asked questions about SamLee Estates student accommodation in Bloemfontein, including NSFAS accommodation, UFS accommodation, CUT accommodation, applications, safety, payments and parent questions." name="twitter:description"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" name="twitter:image"/><meta content="#001F5B" name="theme-color"/><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Student Accommodation FAQ | SamLee Estates",
-  "description": "Frequently asked questions about SamLee Estates student accommodation in Bloemfontein, including NSFAS accommodation, UFS accommodation, CUT accommodation, applications, safety, payments and parent questions.",
-  "url": "https://mandlalee.github.io/SamLee/faq/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/",
-    "logo": "https://mandlalee.github.io/SamLee/assets/images/logo.png"
-  }
-}</script></head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="top-bar">
+
 <div class="container">
+
 <span>Student Accommodation FAQ</span>
+
 <a href="../apply/index.html">
 Apply Online
 </a>
+
 </div>
+
 </div>
+
 <header class="header">
+
 <div class="container header-container">
-<a class="logo" href="../index.html">
-<img alt="SamLee Estates" src="../assets/images/logo.png"/>
+
+<a href="../index.html" class="logo">
+
+<img src="../assets/images/logo.png"
+alt="SamLee Estates">
+
 </a>
+
 <nav class="nav" id="nav">
+
 <ul>
+
 <li><a href="../index.html">Home</a></li>
 <li><a href="../accommodation/index.html">Accommodation</a></li>
 <li><a href="../nsfas/index.html">NSFAS</a></li>
 <li><a href="../ufs/student-accommodation-near-ufs.html">UFS</a></li>
 <li><a href="../cut/student-accommodation-near-cut.html">CUT</a></li>
 <li><a href="../contact/index.html">Contact</a></li>
+
 </ul>
+
 </nav>
-<a class="apply-btn" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="apply-btn">
 
 Apply Now
 
 </a>
-<button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+
+<button class="mobile-menu-btn"
+id="mobileMenuBtn">
 
 ☰
 
 </button>
+
 </div>
-</header><main id="main-content">
+
+</header>
+
 <section class="page-hero">
+
 <div class="container">
+
 <div class="breadcrumbs">
+
 <a href="../index.html">Home</a>
+
 <span> / FAQ</span>
+
 </div>
+
 <h1>
 Student Accommodation FAQ
 </h1>
+
 <p>
-Answers to common questions about SamLee Estates student accommodation, NSFAS accommodation, applications, safety, payments and student living in Bloemfontein.
+Quick answers about SamLee Estates accommodation, applications, NSFAS, facilities, safety, payments, parents and student living in Bloemfontein.
 </p>
+
 </div>
+
 </section>
-<section>
+
+<section class="quick-search-section">
+
 <div class="container">
-<div class="page-content">
-<div class="faq-hub-intro">
+
+<div class="quick-search-card">
+
 <div>
+
 <h2>
-Find Answers Before You Apply
+Need Help Fast?
 </h2>
+
 <p>
-Choosing student accommodation can feel stressful, especially for first-year students, NSFAS-funded students and parents helping their children prepare for university.
+Start with the question category that matches your situation.
 </p>
-<p>
-This FAQ hub brings together the most important questions students ask about accommodation near UFS, accommodation near CUT, NSFAS accredited accommodation, applications, safety, payments, WiFi, facilities and student living in Bloemfontein.
-</p>
-<p>
-Use this page to quickly find the topic you need, then apply online when you are ready.
-</p>
+
 </div>
-<div class="faq-side-box">
-<h3>
-Need Accommodation?
-</h3>
+
+<div class="quick-search-actions">
+
+<a href="application-faq.html">
+Applications
+</a>
+
+<a href="nsfas-faq.html">
+NSFAS
+</a>
+
+<a href="parents-faq.html">
+Parents
+</a>
+
+<a href="../contact/index.html">
+Contact Support
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading centered-heading">
+
+<span class="eyebrow">
+FAQ Hub
+</span>
+
+<h2>
+Find Answers by Category
+</h2>
+
 <p>
-If you already know you need student accommodation near UFS or CUT, submit your application details online.
+Use this page as the main SamLee Estates help centre. Students and parents can quickly find the right accommodation information before applying.
 </p>
-<a class="btn-primary" href="../apply/index.html">
+
+</div>
+
+<div class="support-path-grid">
+
+<a href="application-faq.html"
+class="support-path-card">
+
+<h3>
+Applications
+</h3>
+
+<p>
+Questions about applying online, required details, documents, move-in dates and application follow-up.
+</p>
+
+<span>
+View Application FAQ
+</span>
+
+</a>
+
+<a href="nsfas-faq.html"
+class="support-path-card">
+
+<h3>
+NSFAS
+</h3>
+
+<p>
+Questions about NSFAS accredited accommodation, funding status, documents and student accommodation support.
+</p>
+
+<span>
+View NSFAS FAQ
+</span>
+
+</a>
+
+<a href="accommodation-faq.html"
+class="support-path-card">
+
+<h3>
+Accommodation
+</h3>
+
+<p>
+Questions about room types, locations, availability, facilities, house rules and choosing accommodation.
+</p>
+
+<span>
+View Accommodation FAQ
+</span>
+
+</a>
+
+<a href="ufs-faq.html"
+class="support-path-card">
+
+<h3>
+UFS Students
+</h3>
+
+<p>
+Questions for students looking for accommodation near the University of the Free State.
+</p>
+
+<span>
+View UFS FAQ
+</span>
+
+</a>
+
+<a href="cut-faq.html"
+class="support-path-card">
+
+<h3>
+CUT Students
+</h3>
+
+<p>
+Questions for students looking for accommodation near the Central University of Technology.
+</p>
+
+<span>
+View CUT FAQ
+</span>
+
+</a>
+
+<a href="parents-faq.html"
+class="support-path-card">
+
+<h3>
+Parents and Guardians
+</h3>
+
+<p>
+Questions about safety, costs, applications, documents, location and student support.
+</p>
+
+<span>
+View Parents FAQ
+</span>
+
+</a>
+
+<a href="safety-faq.html"
+class="support-path-card">
+
+<h3>
+Safety
+</h3>
+
+<p>
+Questions about secure access, house rules, visitors, emergency contacts and student safety habits.
+</p>
+
+<span>
+View Safety FAQ
+</span>
+
+</a>
+
+<a href="payments-faq.html"
+class="support-path-card">
+
+<h3>
+Payments
+</h3>
+
+<p>
+Questions about rent, deposits, what is included, budgeting, records and payment planning.
+</p>
+
+<span>
+View Payments FAQ
+</span>
+
+</a>
+
+<a href="wifi-faq.html"
+class="support-path-card">
+
+<h3>
+WiFi and Facilities
+</h3>
+
+<p>
+Questions about WiFi, furniture, laundry, kitchen access, study space and daily student facilities.
+</p>
+
+<span>
+View WiFi FAQ
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq-preview-section">
+
+<div class="container">
+
+<div class="section-heading centered-heading">
+
+<span class="eyebrow">
+Quick Answers
+</span>
+
+<h2>
+Most Common Questions
+</h2>
+
+<p>
+Browse quick answers before visiting the full FAQ pages.
+</p>
+
+</div>
+
+<div class="faq-tabs" data-tabs>
+
+<div class="faq-tab-buttons">
+
+<button class="active" data-tab-button="applications">
+Applications
+</button>
+
+<button data-tab-button="nsfas">
+NSFAS
+</button>
+
+<button data-tab-button="facilities">
+Facilities
+</button>
+
+<button data-tab-button="safety">
+Safety
+</button>
+
+<button data-tab-button="parents">
+Parents
+</button>
+
+<button data-tab-button="payments">
+Payments
+</button>
+
+</div>
+
+<div class="faq-tab-panel active" data-tab-panel="applications">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+How do I apply for SamLee Estates accommodation?
+</div>
+
+<div class="faq-answer">
+Complete the online application form with your name, contact details, institution, year of study, funding type, preferred area, room type and move-in date.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should I apply early?
+</div>
+
+<div class="faq-answer">
+Yes. Students should apply early because accommodation demand usually increases before registration season and the start of the academic year.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can first-year students apply?
+</div>
+
+<div class="faq-answer">
+Yes. First-year students can apply and should prepare their documents, funding details and move-in needs early.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+What happens after I submit the form?
+</div>
+
+<div class="faq-answer">
+SamLee Estates receives your details and can contact you about availability, documents, room options or the next step.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="nsfas">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+Is SamLee Estates NSFAS accredited?
+</div>
+
+<div class="faq-answer">
+Yes. SamLee Estates provides NSFAS accredited student accommodation in Bloemfontein.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can NSFAS-funded students apply online?
+</div>
+
+<div class="faq-answer">
+Yes. NSFAS-funded students can apply online and select NSFAS as their funding type.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+What should NSFAS students prepare?
+</div>
+
+<div class="faq-answer">
+Students should prepare ID details, institution details, student number, proof of registration where available and NSFAS funding information.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can I apply before my NSFAS is fully complete?
+</div>
+
+<div class="faq-answer">
+You can make an accommodation enquiry early, but your registration and funding details may need to be confirmed before accommodation is finalised.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="facilities">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+What facilities should I ask about?
+</div>
+
+<div class="faq-answer">
+Ask about WiFi, furniture, kitchen access, bathroom access, laundry, electricity, water, safety, study space and house rules.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Is WiFi important for student accommodation?
+</div>
+
+<div class="faq-answer">
+Yes. WiFi supports assignments, research, online learning, communication and student administration.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should I ask what is included in the room?
+</div>
+
+<div class="faq-answer">
+Yes. Ask whether the room includes a bed, desk, chair, wardrobe, storage, curtains and other essentials.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Are shared spaces important?
+</div>
+
+<div class="faq-answer">
+Yes. Shared kitchens, bathrooms, laundry areas and common spaces affect comfort, routine, cleanliness and student living.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="safety">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+What safety questions should I ask?
+</div>
+
+<div class="faq-answer">
+Ask about locks, access control, lighting, visitor rules, emergency contacts, house rules and how issues are reported.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should parents ask about safety?
+</div>
+
+<div class="faq-answer">
+Yes. Parents should ask about the area, access rules, visitor rules, emergency contacts, transport routes and property support.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Are house rules important?
+</div>
+
+<div class="faq-answer">
+Yes. House rules help manage visitors, noise, shared spaces, cleanliness and respectful student living.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Who should current tenants contact for property issues?
+</div>
+
+<div class="faq-answer">
+Current tenants should contact the caretaker linked to their property or use urgent property support where needed.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="parents">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can parents contact SamLee Estates?
+</div>
+
+<div class="faq-answer">
+Yes. Parents and guardians can contact SamLee Estates about applications, safety, location, costs, house rules and student support.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can parents help students apply?
+</div>
+
+<div class="faq-answer">
+Yes. Parents can help students prepare documents, check details and complete the online application using the student’s correct information.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+What should parents check before accommodation is finalised?
+</div>
+
+<div class="faq-answer">
+Parents should check safety, location, transport, costs, facilities, house rules, documents and emergency contact information.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should parents keep records?
+</div>
+
+<div class="faq-answer">
+Yes. Parents and students should keep copies of applications, messages, agreements, proof of payments and important accommodation communication.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="payments">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+What costs should students budget for?
+</div>
+
+<div class="faq-answer">
+Students should budget for rent, food, transport, toiletries, laundry, printing, data and emergencies.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should I ask what is included in rent?
+</div>
+
+<div class="faq-answer">
+Yes. Ask whether WiFi, water, electricity, furniture, laundry or other services are included or charged separately.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should I keep proof of payments?
+</div>
+
+<div class="faq-answer">
+Yes. Always keep payment records, receipts, agreements and written communication related to accommodation.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+How can students avoid cost surprises?
+</div>
+
+<div class="faq-answer">
+Ask for clear information about total costs, included services, deposits, payment dates, extra charges and refund conditions.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="center-action">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Apply Online
 
 </a>
-</div>
-</div>
-<h2>
-FAQ Categories
-</h2>
-<div class="faq-category-grid">
-<a class="faq-category-card" href="nsfas-faq.html">
-<h3>
-NSFAS FAQ
-</h3>
-<p>
-Questions about NSFAS accredited accommodation, funding, documents and accommodation support.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="accommodation-faq.html">
-<h3>
-Accommodation FAQ
-</h3>
-<p>
-General questions about student rooms, facilities, locations, applications and availability.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="application-faq.html">
-<h3>
-Application FAQ
-</h3>
-<p>
-Questions about applying online, required details, move-in dates and next steps.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="ufs-faq.html">
-<h3>
-UFS FAQ
-</h3>
-<p>
-Questions for students looking for accommodation near the University of the Free State.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="cut-faq.html">
-<h3>
-CUT FAQ
-</h3>
-<p>
-Questions for students looking for accommodation near the Central University of Technology.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="parents-faq.html">
-<h3>
-Parents FAQ
-</h3>
-<p>
-Questions parents ask about safety, location, house rules, costs and student support.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="safety-faq.html">
-<h3>
-Safety FAQ
-</h3>
-<p>
-Questions about safe student accommodation, access control, visitor rules and emergency contacts.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="payments-faq.html">
-<h3>
-Payments FAQ
-</h3>
-<p>
-Questions about costs, deposits, payment timing, NSFAS payments and monthly planning.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-<a class="faq-category-card" href="wifi-faq.html">
-<h3>
-WiFi FAQ
-</h3>
-<p>
-Questions about internet access, online learning, study support and student connectivity.
-</p>
-<span class="btn-primary">
-View FAQ
-</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="faq-light-section">
-<div class="container">
-<div class="page-content">
-<h2>
-Most Common Questions
-</h2>
-<div class="faq-grid">
-<div class="faq-card">
-<div class="faq-question">
-What is SamLee Estates?
-</div>
-<div class="faq-answer">
-SamLee Estates is a student accommodation provider in Bloemfontein focused on student housing near UFS and CUT.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Where is SamLee Estates based?
-</div>
-<div class="faq-answer">
-SamLee Estates is based in Bloemfontein, Free State, and serves students studying in the city.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Does SamLee Estates offer accommodation near UFS?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides student accommodation options for students studying near the University of the Free State.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Does SamLee Estates offer accommodation near CUT?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides student accommodation options for students studying near the Central University of Technology.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Is SamLee Estates NSFAS accredited?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides NSFAS accredited student accommodation in Bloemfontein.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-How do I apply for accommodation?
-</div>
-<div class="faq-answer">
-You can apply online through the SamLee Estates application page by submitting your name, contact details, institution, funding type, preferred area and move-in date.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Should I apply early?
-</div>
-<div class="faq-answer">
-Yes. Students should apply as early as possible before registration season because accommodation demand increases before the academic year begins.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Can parents contact SamLee Estates?
-</div>
-<div class="faq-answer">
-Yes. Parents and guardians can contact SamLee Estates to ask about location, safety, house rules, applications and student accommodation support.
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section>
-<div class="container">
-<div class="page-content">
-<h2>
-Topics Students Usually Ask About
-</h2>
-<div class="faq-topic-list">
-<div class="faq-topic-item">
-<h3>
-Applying for Accommodation
-</h3>
-<p>
-Students often ask when to apply, what details are required and what happens after submitting an application.
-</p>
-</div>
-<div class="faq-topic-item">
-<h3>
-NSFAS Accommodation
-</h3>
-<p>
-NSFAS-funded students often ask about accreditation, documents, accommodation approval and allowance processes.
-</p>
-</div>
-<div class="faq-topic-item">
-<h3>
-Accommodation Near Campus
-</h3>
-<p>
-Students want to know whether they should stay near UFS, near CUT or in nearby student areas.
-</p>
-</div>
-<div class="faq-topic-item">
-<h3>
-Safety and House Rules
-</h3>
-<p>
-Students and parents ask about access control, visitors, quiet hours, emergency contacts and safe daily routines.
-</p>
-</div>
-<div class="faq-topic-item">
-<h3>
-Costs and Payments
-</h3>
-<p>
-Students ask about rent, deposits, what is included, budgeting and how to prepare financially.
-</p>
-</div>
-<div class="faq-topic-item">
-<h3>
-Packing and Moving In
-</h3>
-<p>
-First-year students often ask what to bring, how to prepare documents and how to settle into student accommodation.
-</p>
-</div>
-</div>
-<div class="faq-search-box">
-<h3>
-Still Not Sure?
-</h3>
-<p>
-Read the student checklist or contact SamLee Estates if your question is not answered here.
-</p>
-<a class="btn-primary" href="../contact/index.html">
 
-Contact Us
+</div>
 
-</a>
 </div>
-</div>
-</div>
+
 </section>
-<section class="faq-light-section">
+
+<section class="section-light">
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Student Accommodation Help
+</span>
+
 <h2>
-Helpful Student Guides
+Popular Help Topics
 </h2>
+
+</div>
+
+<p>
+These pages help students and parents understand the accommodation process before choosing a room.
+</p>
+
+</div>
+
 <div class="resources-grid">
-<a class="resource-card" href="../guides/how-to-choose-student-accommodation.html">
+
+<a href="../guides/how-to-choose-student-accommodation.html"
+class="resource-card">
 
 How to Choose Student Accommodation
 
 </a>
-<a class="resource-card" href="../guides/parents-guide-to-student-accommodation.html">
 
-Parents Guide
+<a href="../guides/parents-guide-to-student-accommodation.html"
+class="resource-card">
+
+Parents Guide to Student Accommodation
 
 </a>
-<a class="resource-card" href="../guides/student-safety-guide-bloemfontein.html">
+
+<a href="../guides/student-safety-guide-bloemfontein.html"
+class="resource-card">
 
 Student Safety Guide
 
 </a>
-<a class="resource-card" href="../guides/university-student-checklist.html">
+
+<a href="../guides/university-student-checklist.html"
+class="resource-card">
 
 University Student Checklist
 
 </a>
-<a class="resource-card" href="../guides/what-to-pack-for-student-accommodation.html">
 
-Packing Guide
+<a href="../guides/what-to-pack-for-student-accommodation.html"
+class="resource-card">
+
+What to Pack
 
 </a>
-<a class="resource-card" href="../guides/student-accommodation-vs-residence.html">
+
+<a href="../guides/moving-to-bloemfontein-for-university.html"
+class="resource-card">
+
+Moving to Bloemfontein
+
+</a>
+
+<a href="../guides/budgeting-for-university-students.html"
+class="resource-card">
+
+Student Budgeting Guide
+
+</a>
+
+<a href="../guides/student-accommodation-vs-residence.html"
+class="resource-card">
 
 Accommodation vs Residence
 
 </a>
+
 </div>
-<h2>
-Popular Accommodation Pages
-</h2>
-<div class="resources-grid">
-<a class="resource-card" href="../accommodation/index.html">
 
-All Accommodation
-
-</a>
-<a class="resource-card" href="../ufs/student-accommodation-near-ufs.html">
-
-Accommodation Near UFS
-
-</a>
-<a class="resource-card" href="../cut/student-accommodation-near-cut.html">
-
-Accommodation Near CUT
-
-</a>
-<a class="resource-card" href="../nsfas/accredited-student-accommodation.html">
-
-NSFAS Accredited Accommodation
-
-</a>
-<a class="resource-card" href="../locations/bloemfontein-student-accommodation.html">
-
-Bloemfontein Accommodation
-
-</a>
-<a class="resource-card" href="../properties/index.html">
-
-Properties
-
-</a>
 </div>
+
 </div>
-</div>
+
 </section>
+
 <section>
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Campus Questions
+</span>
+
 <h2>
-Quick Answers
+Accommodation Near UFS and CUT
 </h2>
-<div class="faq-grid">
-<div class="faq-card">
-<div class="faq-question">
-What areas does SamLee Estates serve?
+
 </div>
-<div class="faq-answer">
-SamLee Estates focuses on student accommodation in Bloemfontein, especially areas connected to UFS, CUT and nearby student communities.
+
+<p>
+Students often search by campus first. Use the links below if your question is connected to UFS or CUT.
+</p>
+
 </div>
+
+<div class="location-card-grid">
+
+<a href="../ufs/student-accommodation-near-ufs.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Student accommodation near UFS">
+
 </div>
-<div class="faq-card">
-<div class="faq-question">
-Can first-year students apply?
+
+<div class="location-content">
+
+<span>University of the Free State</span>
+
+<h3>
+Accommodation Near UFS
+</h3>
+
+<p>
+Browse student accommodation information for students looking for housing near UFS.
+</p>
+
 </div>
-<div class="faq-answer">
-Yes. First-year students are encouraged to apply early so they can prepare properly before registration and orientation.
+
+</a>
+
+<a href="../cut/student-accommodation-near-cut.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Student accommodation near CUT">
+
 </div>
+
+<div class="location-content">
+
+<span>Central University of Technology</span>
+
+<h3>
+Accommodation Near CUT
+</h3>
+
+<p>
+Browse student accommodation information for students looking for housing near CUT.
+</p>
+
 </div>
-<div class="faq-card">
-<div class="faq-question">
-Can postgraduate students apply?
+
+</a>
+
+<a href="../locations/bloemfontein-student-accommodation.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Student accommodation in Bloemfontein">
+
 </div>
-<div class="faq-answer">
-Yes. Postgraduate students can apply for student accommodation through SamLee Estates.
+
+<div class="location-content">
+
+<span>Student City</span>
+
+<h3>
+Bloemfontein Accommodation
+</h3>
+
+<p>
+Explore accommodation options and student areas across Bloemfontein.
+</p>
+
 </div>
+
+</a>
+
+<a href="../nsfas/index.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="NSFAS accommodation in Bloemfontein">
+
 </div>
-<div class="faq-card">
-<div class="faq-question">
-Do I need proof of registration?
+
+<div class="location-content">
+
+<span>Funding Support</span>
+
+<h3>
+NSFAS Accommodation
+</h3>
+
+<p>
+Find NSFAS accommodation information, requirements and support pages.
+</p>
+
 </div>
-<div class="faq-answer">
-You may need proof of registration or other supporting documents during the accommodation process, depending on your funding and application situation.
+
+</a>
+
 </div>
+
 </div>
-<div class="faq-card">
-<div class="faq-question">
-What should I check before choosing accommodation?
+
 </div>
-<div class="faq-answer">
-Check location, safety, cost, WiFi, house rules, transport access, room type, facilities and whether the accommodation meets your funding requirements.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-What if I do not know which property to choose?
-</div>
-<div class="faq-answer">
-You can apply online with your preferred area, campus and funding type. SamLee Estates can contact you about suitable accommodation options.
-</div>
-</div>
-</div>
-</div>
-</div>
+
 </section>
-<section class="cta">
+
+<section class="viewing-banner">
+
 <div class="container">
+
+<div class="viewing-banner-inner">
+
+<div>
+
+<span class="eyebrow">
+Still Need Help?
+</span>
+
+<h2>
+Speak to SamLee Estates
+</h2>
+
+<p>
+Use WhatsApp for accommodation questions, viewing requests, NSFAS questions, parent support or property enquiries.
+</p>
+
+</div>
+
+<div class="viewing-actions">
+
+<a href="https://wa.me/27600000001?text=Hi%20SamLee%20Estates%2C%20I%20have%20a%20student%20accommodation%20question."
+class="btn-primary"
+target="_blank"
+rel="noopener">
+
+WhatsApp Support
+
+</a>
+
+<a href="../contact/index.html"
+class="btn-outline-light">
+
+Contact Page
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-light">
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Browse More FAQs
+</span>
+
+<h2>
+Full FAQ Pages
+</h2>
+
+</div>
+
+<p>
+Use the dedicated FAQ pages for deeper answers.
+</p>
+
+</div>
+
+<div class="resources-grid">
+
+<a href="application-faq.html"
+class="resource-card">
+
+Application FAQ
+
+</a>
+
+<a href="nsfas-faq.html"
+class="resource-card">
+
+NSFAS FAQ
+
+</a>
+
+<a href="accommodation-faq.html"
+class="resource-card">
+
+Accommodation FAQ
+
+</a>
+
+<a href="ufs-faq.html"
+class="resource-card">
+
+UFS FAQ
+
+</a>
+
+<a href="cut-faq.html"
+class="resource-card">
+
+CUT FAQ
+
+</a>
+
+<a href="parents-faq.html"
+class="resource-card">
+
+Parents FAQ
+
+</a>
+
+<a href="safety-faq.html"
+class="resource-card">
+
+Safety FAQ
+
+</a>
+
+<a href="payments-faq.html"
+class="resource-card">
+
+Payments FAQ
+
+</a>
+
+<a href="wifi-faq.html"
+class="resource-card">
+
+WiFi FAQ
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
 <h2>
 Ready to Apply for Student Accommodation?
 </h2>
+
 <p>
 Submit your details and take the next step toward securing student accommodation near UFS or CUT in Bloemfontein.
 </p>
-<a class="btn-primary" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Start Application
 
 </a>
+
 </div>
+
 </section>
-</main><footer class="footer">
+
+<footer class="footer">
+
 <div class="container">
+
 <div class="footer-grid">
+
 <div>
+
 <h3>SamLee Estates</h3>
+
 <p>
 Student accommodation in Bloemfontein near UFS and CUT.
 </p>
+
 </div>
+
 <div>
+
 <h4>FAQ</h4>
+
 <ul>
-<li><a href="nsfas-faq.html">NSFAS FAQ</a></li>
-<li><a href="accommodation-faq.html">Accommodation FAQ</a></li>
-<li><a href="application-faq.html">Application FAQ</a></li>
-<li><a href="parents-faq.html">Parents FAQ</a></li>
+
+<li><a href="application-faq.html">Applications</a></li>
+<li><a href="nsfas-faq.html">NSFAS</a></li>
+<li><a href="parents-faq.html">Parents</a></li>
+<li><a href="safety-faq.html">Safety</a></li>
+
 </ul>
+
 </div>
+
 <div>
+
 <h4>Support</h4>
+
 <ul>
+
 <li><a href="../apply/index.html">Apply Online</a></li>
 <li><a href="../contact/index.html">Contact Us</a></li>
-<li><a href="../guides/university-student-checklist.html">Student Checklist</a></li>
-<li><a href="../guides/how-to-choose-student-accommodation.html">How to Choose</a></li>
+<li><a href="../properties/index.html">Properties</a></li>
+<li><a href="../properties/facilities.html">Facilities</a></li>
+
 </ul>
+
 </div>
+
 </div>
+
 <div class="footer-bottom">
+
 <p>
 © <span class="current-year"></span> SamLee Estates. All Rights Reserved.
 </p>
+
 </div>
+
 </div>
+
 </footer>
-<script defer="" src="../assets/js/main.js"></script>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/components.js"></script>
+
 </body>
+
 </html>
