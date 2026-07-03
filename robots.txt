@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mandlalee.github.io/SamLee/sitemap.xml

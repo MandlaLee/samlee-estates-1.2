@@ -1,0 +1,274 @@
+/* File: assets/css/apply.css */
+
+/* =========================================================
+   SAMLEE ESTATES
+   APPLY PAGE STYLES
+========================================================= */
+
+
+/* =========================================================
+   APPLICATION LAYOUT
+========================================================= */
+
+.application-layout {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 34px;
+    align-items: start;
+}
+
+.application-form-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 6px solid var(--red);
+    padding: 34px;
+    box-shadow: var(--shadow-light);
+}
+
+.application-form-box h2 {
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.application-form-box p {
+    margin-bottom: 24px;
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   FORM STRUCTURE
+========================================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 14px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--white);
+    border-radius: 2px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(0, 31, 91, .08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 18px 0 24px;
+}
+
+.checkbox-group input {
+    margin-top: 5px;
+    width: auto;
+}
+
+.checkbox-group label {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM NOTE AND STATUS
+========================================================= */
+
+.form-note {
+    background: var(--light);
+    border-left: 5px solid var(--navy);
+    padding: 18px;
+    margin-bottom: 22px;
+    color: var(--text);
+}
+
+.form-note strong {
+    color: var(--navy);
+}
+
+.form-status {
+    display: none;
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: #eef8f1;
+    border-left: 5px solid #238636;
+    color: #1f6f3a;
+    font-weight: 700;
+}
+
+.form-status.success {
+    display: block;
+    background: #eef8f1;
+    border-left: 5px solid #238636;
+    color: #1f6f3a;
+}
+
+.form-status.error {
+    display: block;
+    background: #fff5f5;
+    border-left: 5px solid var(--red);
+    color: var(--red);
+}
+
+
+/* =========================================================
+   FORM BUTTON STATE
+========================================================= */
+
+.application-form-box button[disabled] {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.application-sidebar {
+    display: grid;
+    gap: 20px;
+}
+
+.sidebar-card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    padding: 26px;
+}
+
+.sidebar-card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.sidebar-card p {
+    color: var(--text-light);
+    margin-bottom: 14px;
+}
+
+.sidebar-card ul {
+    padding-left: 18px;
+    color: var(--text-light);
+}
+
+.sidebar-card li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   APPLICATION PROCESS STEPS
+========================================================= */
+
+.application-steps {
+    counter-reset: step;
+}
+
+.application-step {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 22px;
+}
+
+.application-step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+}
+
+.application-step h3 {
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.application-step p {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .application-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .application-form-box {
+        padding: 24px;
+    }
+
+    .sidebar-card {
+        padding: 22px;
+    }
+
+    .application-step {
+        padding-left: 44px;
+    }
+
+}

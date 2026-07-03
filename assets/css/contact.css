@@ -1,0 +1,277 @@
+/* File: assets/css/contact.css */
+
+/* =========================================================
+   SAMLEE ESTATES
+   CONTACT PAGE STYLES
+========================================================= */
+
+
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.contact-intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 34px;
+    align-items: start;
+}
+
+.contact-highlight-box {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-top: 6px solid var(--red);
+    padding: 30px;
+}
+
+.contact-highlight-box h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.contact-highlight-box p {
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--red);
+    padding: 28px;
+    box-shadow: var(--shadow-light);
+}
+
+.contact-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.contact-card strong {
+    color: var(--navy);
+}
+
+.contact-link {
+    display: block;
+    color: var(--navy);
+    font-weight: 800;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   WHATSAPP / SUPPORT DIRECTORY
+========================================================= */
+
+.directory-section {
+    background: var(--light);
+    padding: 70px 0;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.directory-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--red);
+    padding: 26px;
+    box-shadow: var(--shadow-light);
+}
+
+.directory-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.directory-card p {
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.directory-meta {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.directory-meta div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.directory-meta strong {
+    color: var(--navy);
+}
+
+.directory-meta span,
+.directory-meta a {
+    color: var(--text-light);
+    text-align: right;
+    font-weight: 700;
+}
+
+.directory-meta a:hover {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   PROPERTY CARETAKERS
+========================================================= */
+
+.caretaker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.caretaker-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 26px;
+    border-top: 5px solid var(--navy);
+    box-shadow: var(--shadow-light);
+}
+
+.caretaker-card h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.caretaker-card p {
+    color: var(--text-light);
+    margin-bottom: 14px;
+}
+
+.caretaker-label {
+    display: inline-block;
+    background: var(--light);
+    border: 1px solid var(--border);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    margin-bottom: 14px;
+}
+
+.caretaker-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   CONTACT HOURS
+========================================================= */
+
+.contact-hours-box {
+    background: var(--navy);
+    color: var(--white);
+    padding: 34px;
+    margin-top: 34px;
+}
+
+.contact-hours-box h3 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.contact-hours-box p {
+    color: rgba(255,255,255,.82);
+    margin-bottom: 16px;
+}
+
+.contact-hours-list {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-hours-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    padding-bottom: 10px;
+}
+
+.contact-hours-list strong {
+    color: var(--white);
+}
+
+.contact-hours-list span {
+    color: rgba(255,255,255,.82);
+    text-align: right;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card-grid,
+    .caretaker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .contact-card-grid,
+    .directory-grid,
+    .caretaker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .directory-meta div,
+    .contact-hours-list div {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .directory-meta span,
+    .directory-meta a,
+    .contact-hours-list span {
+        text-align: left;
+    }
+
+}

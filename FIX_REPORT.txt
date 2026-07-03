@@ -1,0 +1,7 @@
+SamLee Estates 1.2 Fix Report
+===============================
+HTML pages: 66
+Broken internal file links: 0
+Sitemap first line: <?xml version="1.0" encoding="UTF-8"?>
+
+No broken internal file links found.
