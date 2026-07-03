@@ -1,756 +1,1096 @@
-<!DOCTYPE html>
 <!-- File: properties/gallery.html -->
+
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Student Accommodation Gallery | SamLee Estates</title>
-<meta content="View the SamLee Estates student accommodation gallery for Bloemfontein. Explore student rooms, shared spaces, study areas, facilities and accommodation near UFS and CUT." name="description"/>
-<meta content="student accommodation gallery Bloemfontein, SamLee Estates gallery, student rooms Bloemfontein, accommodation near UFS gallery, accommodation near CUT gallery, NSFAS accommodation gallery" name="keywords"/>
 
-<link href="../assets/css/main.css" rel="stylesheet"/>
+<meta name="description"
+content="View the SamLee Estates student accommodation gallery for Bloemfontein. Explore student rooms, shared spaces, facilities, study areas, safety features and accommodation near UFS and CUT.">
 
-<style>
+<meta name="keywords"
+content="student accommodation gallery Bloemfontein, SamLee Estates gallery, student rooms Bloemfontein, accommodation near UFS gallery, accommodation near CUT gallery, NSFAS accommodation gallery">
 
-.gallery-intro-layout {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 34px;
-    align-items: start;
-}
+<link rel="icon" href="../assets/images/favicon.ico">
 
-.gallery-side-box {
-    background: var(--light);
-    border: 1px solid var(--border);
-    border-top: 6px solid var(--red);
-    padding: 30px;
-}
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/components.css">
 
-.gallery-side-box h3 {
-    color: var(--navy);
-    margin-bottom: 12px;
-}
+<link rel="canonical"
+href="https://mandlalee.github.io/SamLee/properties/gallery.html">
 
-.gallery-side-box p {
-    color: var(--text-light);
-    margin-bottom: 16px;
-}
+</head>
 
-.gallery-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 30px 0 34px;
-}
-
-.gallery-filter button {
-    border: 1px solid var(--border);
-    background: var(--light);
-    color: var(--navy);
-    font-weight: 800;
-    padding: 11px 16px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 14px;
-}
-
-.gallery-filter button.active,
-.gallery-filter button:hover {
-    background: var(--navy);
-    color: var(--white);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.gallery-item {
-    background: var(--white);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-    display: block;
-}
-
-.gallery-image {
-    min-height: 250px;
-    background: linear-gradient(135deg, var(--navy), var(--red));
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    color: var(--white);
-    position: relative;
-}
-
-.gallery-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(45deg, rgba(255,255,255,.08) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,.08) 25%, transparent 25%);
-    background-size: 34px 34px;
-    opacity: .55;
-}
-
-.gallery-image span {
-    position: relative;
-    z-index: 2;
-    background: rgba(0, 0, 0, .45);
-    padding: 8px 12px;
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .7px;
-}
-
-.gallery-content {
-    padding: 24px;
-}
-
-.gallery-content h3 {
-    color: var(--navy);
-    margin-bottom: 8px;
-}
-
-.gallery-content p {
-    color: var(--text-light);
-    margin-bottom: 16px;
-}
-
-.gallery-tag {
-    display: inline-flex;
-    background: var(--light);
-    border: 1px solid var(--border);
-    color: var(--navy);
-    padding: 7px 10px;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.gallery-note {
-    background: var(--navy);
-    color: var(--white);
-    padding: 30px;
-    margin-top: 36px;
-}
-
-.gallery-note h3 {
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-.gallery-note p {
-    color: rgba(255,255,255,.82);
-}
-
-.gallery-light-section {
-    background: var(--light);
-    padding: 70px 0;
-}
-
-.gallery-check-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.gallery-check-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-top: 5px solid var(--red);
-    padding: 24px;
-}
-
-.gallery-check-card h3 {
-    color: var(--navy);
-    margin-bottom: 8px;
-}
-
-.gallery-check-card p {
-    color: var(--text-light);
-}
-
-@media (max-width: 1000px) {
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-check-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-intro-layout {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .gallery-grid,
-    .gallery-check-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-image {
-        min-height: 210px;
-    }
-
-}
-
-</style>
-<link href="../assets/images/favicon.ico" rel="icon"/><link href="../assets/images/apple-touch-icon.png" rel="apple-touch-icon"/><link href="https://mandlalee.github.io/SamLee/properties/gallery.html" rel="canonical"/><meta content="index, follow" name="robots"/><meta content="SamLee Estates" property="og:site_name"/><meta content="article" property="og:type"/><meta content="Student Accommodation Gallery | SamLee Estates" property="og:title"/><meta content="View the SamLee Estates student accommodation gallery for Bloemfontein. Explore student rooms, shared spaces, study areas, facilities and accommodation near UFS and CUT." property="og:description"/><meta content="https://mandlalee.github.io/SamLee/properties/gallery.html" property="og:url"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" property="og:image"/><meta content="en_ZA" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Student Accommodation Gallery | SamLee Estates" name="twitter:title"/><meta content="View the SamLee Estates student accommodation gallery for Bloemfontein. Explore student rooms, shared spaces, study areas, facilities and accommodation near UFS and CUT." name="twitter:description"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" name="twitter:image"/><meta content="#001F5B" name="theme-color"/><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Student Accommodation Gallery | SamLee Estates",
-  "description": "View the SamLee Estates student accommodation gallery for Bloemfontein. Explore student rooms, shared spaces, study areas, facilities and accommodation near UFS and CUT.",
-  "url": "https://mandlalee.github.io/SamLee/properties/gallery.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/",
-    "logo": "https://mandlalee.github.io/SamLee/assets/images/logo.png"
-  }
-}</script></head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="top-bar">
+
 <div class="container">
+
 <span>Student Accommodation Gallery</span>
+
 <a href="../apply/index.html">
 Apply Online
 </a>
+
 </div>
+
 </div>
+
 <header class="header">
+
 <div class="container header-container">
-<a class="logo" href="../index.html">
-<img alt="SamLee Estates" src="../assets/images/logo.png"/>
+
+<a href="../index.html" class="logo">
+
+<img src="../assets/images/logo.png"
+alt="SamLee Estates">
+
 </a>
+
 <nav class="nav" id="nav">
+
 <ul>
+
 <li><a href="../index.html">Home</a></li>
 <li><a href="../accommodation/index.html">Accommodation</a></li>
 <li><a href="../nsfas/index.html">NSFAS</a></li>
 <li><a href="../ufs/student-accommodation-near-ufs.html">UFS</a></li>
 <li><a href="../cut/student-accommodation-near-cut.html">CUT</a></li>
 <li><a href="../contact/index.html">Contact</a></li>
+
 </ul>
+
 </nav>
-<a class="apply-btn" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="apply-btn">
 
 Apply Now
 
 </a>
-<button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+
+<button class="mobile-menu-btn"
+id="mobileMenuBtn">
 
 ☰
 
 </button>
+
 </div>
-</header><main id="main-content">
+
+</header>
+
 <section class="page-hero">
+
 <div class="container">
+
 <div class="breadcrumbs">
+
 <a href="../index.html">Home</a>
+
 <span> / </span>
+
 <a href="index.html">Properties</a>
+
 <span> / Gallery</span>
+
 </div>
+
 <h1>
 Student Accommodation Gallery
 </h1>
+
 <p>
-View student accommodation spaces, facilities and living areas connected to SamLee Estates student housing in Bloemfontein.
+Explore student rooms, shared spaces, facilities and living areas connected to SamLee Estates accommodation in Bloemfontein.
 </p>
+
 </div>
+
 </section>
-<section>
+
+<section class="quick-search-section">
+
 <div class="container">
-<div class="page-content">
-<div class="gallery-intro-layout">
+
+<div class="quick-search-card">
+
 <div>
+
+<h2>
+Want to View a Property?
+</h2>
+
+<p>
+Browse the gallery, check the facilities, then apply online or book a viewing.</p>
+
+</div>
+
+<div class="quick-search-actions">
+
+<a href="../apply/index.html">
+Apply Online
+</a>
+
+<a href="index.html">
+View Properties
+</a>
+
+<a href="facilities.html">
+View Facilities
+</a>
+
+<a href="../contact/index.html">
+Contact Support
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Gallery
+</span>
+
 <h2>
 Explore Student Living Spaces
 </h2>
-<p>
-A student accommodation gallery helps students and parents understand the type of environment they are applying for before making a decision.
-</p>
-<p>
-This page is designed to show rooms, shared spaces, study areas, kitchen areas, facilities and student living features connected to SamLee Estates accommodation.
-</p>
-<p>
-As final property photos are added, this gallery can be updated with real images of rooms, facilities and accommodation spaces.
-</p>
+
 </div>
-<div class="gallery-side-box">
-<h3>
-Want to Apply?
-</h3>
+
 <p>
-Submit your details and tell us your campus, funding type, preferred area and move-in date.
+Use this gallery structure for real property photos when they are ready. For now, these image blocks work as clean placeholders for rooms, facilities and student living areas.
 </p>
-<a class="btn-primary" href="../apply/index.html">
+
+</div>
+
+<div class="gallery-filter-buttons" data-gallery-filters>
+
+<button class="active" data-gallery-filter="all">
+All
+</button>
+
+<button data-gallery-filter="rooms">
+Rooms
+</button>
+
+<button data-gallery-filter="study">
+Study
+</button>
+
+<button data-gallery-filter="shared">
+Shared Spaces
+</button>
+
+<button data-gallery-filter="facilities">
+Facilities
+</button>
+
+<button data-gallery-filter="safety">
+Safety
+</button>
+
+</div>
+
+<div class="gallery-showcase-grid" data-gallery-grid>
+
+<article class="gallery-showcase-card" data-gallery-category="rooms">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Student room at SamLee Estates">
+
+<span>
+Room Preview
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Student Room
+</h3>
+
+<p>
+A student room should support rest, study, storage and a stable daily routine.
+</p>
+
+<div class="room-tags">
+
+<span>Rooms</span>
+<span>Student Living</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="study">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Study-friendly student accommodation space">
+
+<span>
+Study Space
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Study-Friendly Area
+</h3>
+
+<p>
+Students need a living space that helps them focus, complete assignments and prepare for tests.
+</p>
+
+<div class="room-tags">
+
+<span>Study</span>
+<span>Focus</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="shared">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Shared student living space">
+
+<span>
+Shared Living
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Shared Living Area
+</h3>
+
+<p>
+Shared spaces should be practical, respectful and supported by clear house rules.
+</p>
+
+<div class="room-tags">
+
+<span>Shared Spaces</span>
+<span>House Rules</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="facilities">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Student accommodation kitchen area">
+
+<span>
+Kitchen Access
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Kitchen Area
+</h3>
+
+<p>
+Kitchen access helps students prepare meals, save money and manage their weekly routine.
+</p>
+
+<div class="room-tags">
+
+<span>Kitchen</span>
+<span>Facilities</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="facilities">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Student accommodation laundry area">
+
+<span>
+Laundry Access
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Laundry Area
+</h3>
+
+<p>
+Laundry access makes student life more practical during the academic year.
+</p>
+
+<div class="room-tags">
+
+<span>Laundry</span>
+<span>Facilities</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="safety">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Safe student accommodation environment">
+
+<span>
+Safety Focus
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Secure Living Environment
+</h3>
+
+<p>
+Students and parents should ask about access, lighting, locks, visitor rules and emergency contacts.
+</p>
+
+<div class="room-tags">
+
+<span>Safety</span>
+<span>Support</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="rooms">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Private student room option">
+
+<span>
+Private Room
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Private Room Option
+</h3>
+
+<p>
+Private rooms can suit students who prefer independence, privacy and quieter study time.
+</p>
+
+<div class="room-tags">
+
+<span>Private</span>
+<span>Rooms</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="rooms">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Shared student room option">
+
+<span>
+Shared Room
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Shared Room Option
+</h3>
+
+<p>
+Shared rooms may suit students looking for a practical and affordable accommodation option.
+</p>
+
+<div class="room-tags">
+
+<span>Shared</span>
+<span>Affordable</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="gallery-showcase-card" data-gallery-category="shared">
+
+<div class="gallery-showcase-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Student accommodation common area">
+
+<span>
+Common Area
+</span>
+
+</div>
+
+<div class="gallery-showcase-content">
+
+<h3>
+Student Common Space
+</h3>
+
+<p>
+Common areas can help students settle in, communicate respectfully and feel part of a shared living environment.
+</p>
+
+<div class="room-tags">
+
+<span>Shared Spaces</span>
+<span>Community</span>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+<div class="gallery-note-card">
+
+<h3>
+Photo Update Note
+</h3>
+
+<p>
+Replace these placeholder images with real SamLee Estates property photos once the rooms, exterior shots, shared areas and facilities are ready. Keep the same card structure and only update the image paths, headings and descriptions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="viewing-banner">
+
+<div class="container">
+
+<div class="viewing-banner-inner">
+
+<div>
+
+<span class="eyebrow">
+Book a Viewing
+</span>
+
+<h2>
+Want to See the Rooms in Person?
+</h2>
+
+<p>
+Book a viewing and ask about room setup, WiFi, safety, shared spaces, move-in requirements and availability.
+</p>
+
+</div>
+
+<div class="viewing-actions">
+
+<a href="https://wa.me/27600000001?text=Hi%20SamLee%20Estates%2C%20I%20want%20to%20book%20a%20viewing%20after%20checking%20the%20gallery."
+class="btn-primary"
+target="_blank"
+rel="noopener">
+
+Book on WhatsApp
+
+</a>
+
+<a href="../apply/index.html"
+class="btn-outline-light">
 
 Apply Online
 
 </a>
+
 </div>
+
 </div>
-<div class="gallery-filter">
-<button class="active" data-filter="all">
-All
-</button>
-<button data-filter="rooms">
-Rooms
-</button>
-<button data-filter="study">
-Study
-</button>
-<button data-filter="shared">
-Shared Spaces
-</button>
-<button data-filter="facilities">
-Facilities
-</button>
-<button data-filter="safety">
-Safety
-</button>
+
 </div>
-<div class="gallery-grid">
-<article class="gallery-item" data-category="rooms">
-<div class="gallery-image">
-<span>Room Preview</span>
-</div>
-<div class="gallery-content">
-<h3>
-Student Room
-</h3>
-<p>
-A room should give students space to sleep, study, store belongings and maintain a daily routine.
-</p>
-<span class="gallery-tag">
-Rooms
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="study">
-<div class="gallery-image">
-<span>Study Space</span>
-</div>
-<div class="gallery-content">
-<h3>
-Study-Friendly Area
-</h3>
-<p>
-A student living environment should support studying, assignments, online learning and quiet focus.
-</p>
-<span class="gallery-tag">
-Study
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="shared">
-<div class="gallery-image">
-<span>Shared Living</span>
-</div>
-<div class="gallery-content">
-<h3>
-Shared Student Space
-</h3>
-<p>
-Shared areas help students live practically, communicate respectfully and follow house rules.
-</p>
-<span class="gallery-tag">
-Shared Spaces
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="facilities">
-<div class="gallery-image">
-<span>Kitchen Access</span>
-</div>
-<div class="gallery-content">
-<h3>
-Kitchen Area
-</h3>
-<p>
-Kitchen access helps students prepare meals, save money and manage food routines.
-</p>
-<span class="gallery-tag">
-Facilities
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="facilities">
-<div class="gallery-image">
-<span>Laundry Access</span>
-</div>
-<div class="gallery-content">
-<h3>
-Laundry Area
-</h3>
-<p>
-Laundry access supports practical student living throughout the academic year.
-</p>
-<span class="gallery-tag">
-Facilities
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="safety">
-<div class="gallery-image">
-<span>Safety Focus</span>
-</div>
-<div class="gallery-content">
-<h3>
-Secure Living Environment
-</h3>
-<p>
-Students and parents should consider access, lighting, house rules and emergency contacts.
-</p>
-<span class="gallery-tag">
-Safety
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="rooms">
-<div class="gallery-image">
-<span>Private Room</span>
-</div>
-<div class="gallery-content">
-<h3>
-Private Room Option
-</h3>
-<p>
-Some students prefer private rooms because they want independence, privacy and quiet study time.
-</p>
-<span class="gallery-tag">
-Rooms
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="rooms">
-<div class="gallery-image">
-<span>Shared Room</span>
-</div>
-<div class="gallery-content">
-<h3>
-Shared Room Option
-</h3>
-<p>
-Shared rooms can suit students looking for practical and affordable accommodation options.
-</p>
-<span class="gallery-tag">
-Rooms
-</span>
-</div>
-</article>
-<article class="gallery-item" data-category="shared">
-<div class="gallery-image">
-<span>Student Living</span>
-</div>
-<div class="gallery-content">
-<h3>
-Student Living Area
-</h3>
-<p>
-Good shared spaces help students feel settled, organised and connected to the accommodation community.
-</p>
-<span class="gallery-tag">
-Shared Spaces
-</span>
-</div>
-</article>
-</div>
-<div class="gallery-note">
-<h3>
-Photo Update Note
-</h3>
-<p>
-Replace these preview blocks with real property photos once final room, exterior and facility images are ready. Keep the same gallery structure and only replace the preview area with image tags.
-</p>
-</div>
-</div>
-</div>
+
 </section>
-<section class="gallery-light-section">
+
+<section class="section-light">
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Photo Checklist
+</span>
+
 <h2>
 What Students Should Look For in Photos
 </h2>
+
+</div>
+
 <p>
-When viewing accommodation photos, students and parents should look beyond decoration. Focus on practical details that affect daily life.
+When looking at student accommodation photos, do not only focus on how nice the room looks. Check whether the space supports your daily routine.
 </p>
-<div class="gallery-check-grid">
-<div class="gallery-check-card">
+
+</div>
+
+<div class="support-path-grid">
+
+<div class="support-path-card">
+
 <h3>
 Room Setup
 </h3>
+
 <p>
-Check whether the room looks suitable for sleeping, studying and storage.
+Check whether the room looks suitable for sleeping, studying and storing belongings.
 </p>
+
+<span>
+Rooms
+</span>
+
 </div>
-<div class="gallery-check-card">
+
+<div class="support-path-card">
+
 <h3>
 Study Space
 </h3>
+
 <p>
-Look for desk space, lighting and an environment that supports academic work.
+Look for desk space, lighting and an environment that supports focus.
 </p>
+
+<span>
+Study
+</span>
+
 </div>
-<div class="gallery-check-card">
+
+<div class="support-path-card">
+
 <h3>
 Shared Areas
 </h3>
+
 <p>
 Review kitchen, bathroom, laundry and common space arrangements.
 </p>
+
+<span>
+Shared
+</span>
+
 </div>
-<div class="gallery-check-card">
+
+<div class="support-path-card">
+
 <h3>
 Safety Details
 </h3>
+
 <p>
 Look for secure access, lighting, locks, gates and clear house rules.
 </p>
+
+<span>
+Safety
+</span>
+
 </div>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
+
 <section>
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Explore More
+</span>
+
 <h2>
-Gallery Categories
-</h2>
+Gallery Categories</h2>
+
+</div>
+
+<p>
+Continue browsing accommodation pages, facilities and student guides.
+</p>
+
+</div>
+
 <div class="resources-grid">
-<a class="resource-card" href="index.html">
+
+<a href="index.html"
+class="resource-card">
 
 All Properties
 
 </a>
-<a class="resource-card" href="facilities.html">
+
+<a href="facilities.html"
+class="resource-card">
 
 Facilities
 
 </a>
-<a class="resource-card" href="../accommodation/index.html">
+
+<a href="../accommodation/index.html"
+class="resource-card">
 
 Accommodation Types
 
 </a>
-<a class="resource-card" href="../ufs/student-accommodation-near-ufs.html">
+
+<a href="../ufs/student-accommodation-near-ufs.html"
+class="resource-card">
 
 Accommodation Near UFS
 
 </a>
-<a class="resource-card" href="../cut/student-accommodation-near-cut.html">
+
+<a href="../cut/student-accommodation-near-cut.html"
+class="resource-card">
 
 Accommodation Near CUT
 
 </a>
-<a class="resource-card" href="../nsfas/accredited-student-accommodation.html">
+
+<a href="../nsfas/accredited-student-accommodation.html"
+class="resource-card">
 
 NSFAS Accredited Accommodation
 
 </a>
+
 </div>
+
 <h2>
 Helpful Guides Before Viewing Accommodation
 </h2>
+
 <div class="resources-grid">
-<a class="resource-card" href="../guides/how-to-choose-student-accommodation.html">
+
+<a href="../guides/how-to-choose-student-accommodation.html"
+class="resource-card">
 
 How to Choose Student Accommodation
 
 </a>
-<a class="resource-card" href="../guides/student-accommodation-vs-residence.html">
+
+<a href="../guides/student-accommodation-vs-residence.html"
+class="resource-card">
 
 Accommodation vs Residence
 
 </a>
-<a class="resource-card" href="../guides/parents-guide-to-student-accommodation.html">
+
+<a href="../guides/parents-guide-to-student-accommodation.html"
+class="resource-card">
 
 Parents Guide
 
 </a>
-<a class="resource-card" href="../guides/student-safety-guide-bloemfontein.html">
+
+<a href="../guides/student-safety-guide-bloemfontein.html"
+class="resource-card">
 
 Student Safety Guide
 
 </a>
-<a class="resource-card" href="../guides/university-student-checklist.html">
+
+<a href="../guides/university-student-checklist.html"
+class="resource-card">
 
 University Student Checklist
 
 </a>
-<a class="resource-card" href="../guides/what-to-pack-for-student-accommodation.html">
+
+<a href="../guides/what-to-pack-for-student-accommodation.html"
+class="resource-card">
 
 Packing Guide
 
 </a>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
-<section class="gallery-light-section">
+
+<section class="section-light">
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading centered-heading">
+
+<span class="eyebrow">
+Gallery FAQs
+</span>
+
 <h2>
-Frequently Asked Questions
+Questions About Viewing Accommodation Photos
 </h2>
+
+<p>
+Quick answers for students and parents reviewing accommodation photos before applying.
+</p>
+
+</div>
+
+<div class="faq-tabs" data-tabs>
+
+<div class="faq-tab-buttons">
+
+<button class="active" data-tab-button="photos">
+Photos
+</button>
+
+<button data-tab-button="rooms">
+Rooms
+</button>
+
+<button data-tab-button="parents">
+Parents
+</button>
+
+<button data-tab-button="viewings">
+Viewings
+</button>
+
+</div>
+
+<div class="faq-tab-panel active" data-tab-panel="photos">
+
 <div class="faq-grid">
+
 <div class="faq-card">
+
 <div class="faq-question">
-Can I view student accommodation photos before applying?
+Can I view photos before applying?
 </div>
+
 <div class="faq-answer">
-Yes. Students and parents should review available photos, ask questions and confirm important accommodation details before making decisions.
+Yes. Students and parents should review available photos, ask questions and confirm important details before finalising accommodation.
 </div>
+
 </div>
+
 <div class="faq-card">
+
 <div class="faq-question">
 What should I check in accommodation photos?
 </div>
+
 <div class="faq-answer">
 Check room setup, study space, safety features, shared areas, kitchen access, bathroom access, laundry arrangements and general property condition.
 </div>
+
 </div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="rooms">
+
+<div class="faq-grid">
+
 <div class="faq-card">
+
+<div class="faq-question">
+Should I choose a room only because it looks nice?
+</div>
+
+<div class="faq-answer">
+No. The room should also be practical, safe, study-friendly and suitable for your budget and daily routine.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Should I ask what furniture is included?
+</div>
+
+<div class="faq-answer">
+Yes. Always ask whether the room includes a bed, desk, chair, wardrobe or storage space.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="parents">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
 <div class="faq-question">
 Should parents view the gallery?
 </div>
+
 <div class="faq-answer">
 Yes. Parents can use the gallery to understand the accommodation environment and prepare questions about safety, location, facilities and house rules.
 </div>
+
 </div>
+
 <div class="faq-card">
+
 <div class="faq-question">
-Can NSFAS students apply for SamLee Estates accommodation?
+What should parents ask after viewing photos?
 </div>
+
 <div class="faq-answer">
-Yes. SamLee Estates provides NSFAS accredited student accommodation in Bloemfontein.
+Parents should ask about safety, access rules, costs, what is included, transport, emergency contacts and the move-in process.
 </div>
+
 </div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="viewings">
+
+<div class="faq-grid">
+
 <div class="faq-card">
+
 <div class="faq-question">
-Does SamLee Estates offer accommodation near UFS and CUT?
+Can I book a viewing after seeing the gallery?
 </div>
+
 <div class="faq-answer">
-Yes. SamLee Estates provides student accommodation options for students studying near UFS and CUT.
+Yes. Use the WhatsApp viewing link or contact SamLee Estates to ask about viewing arrangements.
 </div>
+
 </div>
+
 <div class="faq-card">
+
 <div class="faq-question">
-How do I apply after viewing the gallery?
+Can parents attend the viewing?
 </div>
+
 <div class="faq-answer">
-Use the online application page and submit your contact details, institution, funding type, preferred area and move-in date.
+Yes. Parents and guardians can ask questions about safety, location, facilities, costs and house rules.
 </div>
+
 </div>
+
 </div>
+
 </div>
+
 </div>
+
+<div class="center-action">
+
+<a href="../faq/index.html"
+class="btn-primary">
+
+View All FAQs
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
 <section class="cta">
+
 <div class="container">
+
 <h2>
 Ready to Apply for Student Accommodation?
 </h2>
+
 <p>
 View the gallery, compare facilities and apply early for accommodation near UFS or CUT.
 </p>
-<a class="btn-primary" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Start Application
 
 </a>
+
 </div>
+
 </section>
-</main><footer class="footer">
+
+<footer class="footer">
+
 <div class="container">
+
 <div class="footer-grid">
+
 <div>
+
 <h3>SamLee Estates</h3>
+
 <p>
 Student accommodation in Bloemfontein near UFS and CUT.
 </p>
+
 </div>
+
 <div>
+
 <h4>Properties</h4>
+
 <ul>
+
 <li><a href="index.html">All Properties</a></li>
 <li><a href="facilities.html">Facilities</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="../apply/index.html">Apply Online</a></li>
+
 </ul>
+
 </div>
+
 <div>
+
 <h4>Accommodation</h4>
+
 <ul>
+
 <li><a href="../ufs/student-accommodation-near-ufs.html">Near UFS</a></li>
 <li><a href="../cut/student-accommodation-near-cut.html">Near CUT</a></li>
 <li><a href="../nsfas/accredited-student-accommodation.html">NSFAS Accredited</a></li>
 <li><a href="../guides/how-to-choose-student-accommodation.html">How to Choose</a></li>
+
 </ul>
+
 </div>
+
 </div>
+
 <div class="footer-bottom">
+
 <p>
 © <span class="current-year"></span> SamLee Estates. All Rights Reserved.
 </p>
+
 </div>
+
 </div>
+
 </footer>
-<script defer="" src="../assets/js/main.js"></script>
-<script>
 
-const filterButtons = document.querySelectorAll(".gallery-filter button");
-const galleryItems = document.querySelectorAll(".gallery-item");
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/components.js"></script>
 
-filterButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        const filter = button.getAttribute("data-filter");
-
-        filterButtons.forEach(function(btn) {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        galleryItems.forEach(function(item) {
-
-            const category = item.getAttribute("data-category");
-
-            if (filter === "all" || category === filter) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
-
-        });
-
-    });
-
-});
-
-</script>
 </body>
+
 </html>
