@@ -1,830 +1,1266 @@
-<!DOCTYPE html>
 <!-- File: properties/index.html -->
+
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Student Accommodation Properties | SamLee Estates</title>
-<meta content="Explore SamLee Estates student accommodation properties in Bloemfontein near UFS and CUT. Find NSFAS accredited student accommodation options, rooms, facilities and application information." name="description"/>
-<meta content="student accommodation properties Bloemfontein, SamLee Estates properties, accommodation near UFS, accommodation near CUT, NSFAS accredited accommodation, student rooms Bloemfontein" name="keywords"/>
 
-<link href="../assets/css/main.css" rel="stylesheet"/>
+<meta name="description"
+content="Explore SamLee Estates student accommodation properties in Bloemfontein near UFS and CUT. View available rooms, facilities, NSFAS accommodation options and apply online.">
 
-<style>
+<meta name="keywords"
+content="student accommodation properties Bloemfontein, SamLee Estates properties, available rooms Bloemfontein, accommodation near UFS, accommodation near CUT, NSFAS accredited accommodation">
 
-.properties-hero-note {
-    margin-top: 24px;
-    background: rgba(255, 255, 255, .12);
-    border-left: 5px solid var(--red);
-    padding: 18px 20px;
-    max-width: 760px;
-}
+<link rel="icon" href="../assets/images/favicon.ico">
 
-.properties-intro-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 34px;
-    align-items: start;
-}
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/components.css">
 
-.properties-side-box {
-    background: var(--light);
-    border: 1px solid var(--border);
-    border-top: 6px solid var(--red);
-    padding: 30px;
-}
+<link rel="canonical"
+href="https://mandlalee.github.io/SamLee/properties/">
 
-.properties-side-box h3 {
-    color: var(--navy);
-    margin-bottom: 12px;
-}
+</head>
 
-.properties-side-box p {
-    color: var(--text-light);
-    margin-bottom: 16px;
-}
-
-.properties-filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 28px 0 34px;
-}
-
-.properties-filter-bar a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--light);
-    border: 1px solid var(--border);
-    color: var(--navy);
-    font-weight: 800;
-    padding: 11px 16px;
-    font-size: 14px;
-}
-
-.properties-filter-bar a:hover {
-    background: var(--navy);
-    color: var(--white);
-}
-
-.property-list-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 26px;
-}
-
-.property-list-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-}
-
-.property-list-image {
-    min-height: 230px;
-    background: linear-gradient(135deg, var(--navy), var(--red));
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    color: var(--white);
-}
-
-.property-list-image span {
-    background: rgba(0, 0, 0, .45);
-    padding: 8px 12px;
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .7px;
-}
-
-.property-list-content {
-    padding: 26px;
-}
-
-.property-list-content h3 {
-    color: var(--navy);
-    margin-bottom: 10px;
-}
-
-.property-list-content p {
-    color: var(--text-light);
-    margin-bottom: 16px;
-}
-
-.property-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 18px;
-}
-
-.property-tags span {
-    background: var(--light);
-    color: var(--navy);
-    border: 1px solid var(--border);
-    font-size: 12px;
-    font-weight: 800;
-    padding: 7px 9px;
-}
-
-.property-meta-list {
-    display: grid;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.property-meta-list div {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
-    font-size: 14px;
-}
-
-.property-meta-list strong {
-    color: var(--navy);
-}
-
-.property-meta-list span {
-    color: var(--text-light);
-    text-align: right;
-}
-
-.property-card-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.property-card-actions a {
-    flex: 1;
-    min-width: 130px;
-    text-align: center;
-}
-
-.facilities-strip {
-    background: var(--light);
-    padding: 70px 0;
-}
-
-.facilities-strip-title {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 34px;
-}
-
-.facilities-strip-title h2 {
-    color: var(--navy);
-    margin-bottom: 12px;
-}
-
-.facilities-strip-title p {
-    color: var(--text-light);
-}
-
-.property-process {
-    counter-reset: process;
-}
-
-.property-process-item {
-    position: relative;
-    padding-left: 52px;
-    margin-bottom: 24px;
-}
-
-.property-process-item::before {
-    counter-increment: process;
-    content: counter(process);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 34px;
-    height: 34px;
-    background: var(--red);
-    color: var(--white);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-weight: 900;
-}
-
-.property-process-item h3 {
-    color: var(--navy);
-    margin-bottom: 6px;
-}
-
-.property-process-item p {
-    color: var(--text-light);
-}
-
-@media (max-width: 1000px) {
-
-    .property-list-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .properties-intro-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .property-list-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .property-list-image {
-        min-height: 190px;
-    }
-
-    .property-card-actions a {
-        flex: initial;
-        width: 100%;
-    }
-
-}
-
-</style>
-<link href="../assets/images/favicon.ico" rel="icon"/><link href="../assets/images/apple-touch-icon.png" rel="apple-touch-icon"/><link href="https://mandlalee.github.io/SamLee/properties/" rel="canonical"/><meta content="index, follow" name="robots"/><meta content="SamLee Estates" property="og:site_name"/><meta content="article" property="og:type"/><meta content="Student Accommodation Properties | SamLee Estates" property="og:title"/><meta content="Explore SamLee Estates student accommodation properties in Bloemfontein near UFS and CUT. Find NSFAS accredited student accommodation options, rooms, facilities and application information." property="og:description"/><meta content="https://mandlalee.github.io/SamLee/properties/" property="og:url"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" property="og:image"/><meta content="en_ZA" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Student Accommodation Properties | SamLee Estates" name="twitter:title"/><meta content="Explore SamLee Estates student accommodation properties in Bloemfontein near UFS and CUT. Find NSFAS accredited student accommodation options, rooms, facilities and application information." name="twitter:description"/><meta content="https://mandlalee.github.io/SamLee/assets/images/og-image-1200x630.jpg" name="twitter:image"/><meta content="#001F5B" name="theme-color"/><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Student Accommodation Properties | SamLee Estates",
-  "description": "Explore SamLee Estates student accommodation properties in Bloemfontein near UFS and CUT. Find NSFAS accredited student accommodation options, rooms, facilities and application information.",
-  "url": "https://mandlalee.github.io/SamLee/properties/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "SamLee Estates",
-    "url": "https://mandlalee.github.io/SamLee/",
-    "logo": "https://mandlalee.github.io/SamLee/assets/images/logo.png"
-  }
-}</script></head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="top-bar">
+
 <div class="container">
-<span>Student Accommodation Properties</span>
+
+<span>Student Accommodation Properties in Bloemfontein</span>
+
 <a href="../apply/index.html">
 Apply Online
 </a>
+
 </div>
+
 </div>
+
 <header class="header">
+
 <div class="container header-container">
-<a class="logo" href="../index.html">
-<img alt="SamLee Estates" src="../assets/images/logo.png"/>
+
+<a href="../index.html" class="logo">
+
+<img src="../assets/images/logo.png"
+alt="SamLee Estates">
+
 </a>
+
 <nav class="nav" id="nav">
+
 <ul>
+
 <li><a href="../index.html">Home</a></li>
 <li><a href="../accommodation/index.html">Accommodation</a></li>
 <li><a href="../nsfas/index.html">NSFAS</a></li>
 <li><a href="../ufs/student-accommodation-near-ufs.html">UFS</a></li>
 <li><a href="../cut/student-accommodation-near-cut.html">CUT</a></li>
 <li><a href="../contact/index.html">Contact</a></li>
+
 </ul>
+
 </nav>
-<a class="apply-btn" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="apply-btn">
 
 Apply Now
 
 </a>
-<button aria-controls="nav" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+
+<button class="mobile-menu-btn"
+id="mobileMenuBtn">
 
 ☰
 
 </button>
+
 </div>
-</header><main id="main-content">
+
+</header>
+
 <section class="page-hero">
+
 <div class="container">
+
 <div class="breadcrumbs">
+
 <a href="../index.html">Home</a>
+
 <span> / Properties</span>
+
 </div>
+
 <h1>
 Student Accommodation Properties
 </h1>
+
 <p>
-Explore SamLee Estates student accommodation options in Bloemfontein near UFS and CUT.
+Browse SamLee Estates student accommodation options in Bloemfontein near UFS and CUT, including NSFAS accredited accommodation support.
 </p>
-<div class="properties-hero-note">
-Student accommodation should be safe, practical, study-friendly and close enough to support your daily university routine.
+
 </div>
-</div>
+
 </section>
-<section>
+
+<section class="quick-search-section">
+
 <div class="container">
-<div class="page-content">
-<div class="properties-intro-grid">
+
+<div class="quick-search-card">
+
 <div>
+
 <h2>
-Find Student Accommodation in Bloemfontein
+Find the Right Accommodation
 </h2>
+
 <p>
-SamLee Estates provides student accommodation options for students studying in Bloemfontein, especially students looking for accommodation near the University of the Free State and the Central University of Technology.
+Start with your campus, funding type or preferred student area.
 </p>
-<p>
-This properties page gives students and parents a clear place to browse available accommodation options, compare areas and start the application process.
-</p>
-<p>
-If you are not sure which option is right for you, begin with the application form and the SamLee Estates team can contact you about availability and suitable next steps.
-</p>
+
 </div>
-<div class="properties-side-box">
-<h3>
-Need a Room?
-</h3>
-<p>
-Apply online and share your campus, funding type, preferred area and move-in date.
-</p>
-<a class="btn-primary" href="../apply/index.html">
 
-Apply Online
+<div class="quick-search-actions">
 
+<a href="../ufs/student-accommodation-near-ufs.html">
+Near UFS
 </a>
+
+<a href="../cut/student-accommodation-near-cut.html">
+Near CUT
+</a>
+
+<a href="../nsfas/accredited-student-accommodation.html">
+NSFAS Accredited
+</a>
+
+<a href="../apply/index.html">
+Apply Now
+</a>
+
 </div>
+
 </div>
-<div class="properties-filter-bar">
-<a href="../ufs/student-accommodation-near-ufs.html">Near UFS</a>
-<a href="../cut/student-accommodation-near-cut.html">Near CUT</a>
-<a href="../nsfas/accredited-student-accommodation.html">NSFAS Accredited</a>
-<a href="../accommodation/first-year-student-accommodation.html">First-Year Students</a>
-<a href="../accommodation/affordable-student-accommodation.html">Affordable Options</a>
-<a href="facilities.html">Facilities</a>
-<a href="gallery.html">Gallery</a>
+
 </div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Available Rooms
+</span>
+
 <h2>
-Featured Accommodation Options
+Featured Student Accommodation Options
 </h2>
-<p>
-Use these property cards as your main accommodation listing section. You can update the names, photos, room details and availability once final property information is ready.
-</p>
-<div class="property-list-grid">
-<article class="property-list-card">
-<div class="property-list-image">
-<span>Student Accommodation</span>
+
 </div>
-<div class="property-list-content">
+
+<p>
+These property cards are ready for your real property names, prices, room photos and availability status. Replace the placeholders when final details are confirmed.
+</p>
+
+</div>
+
+<div class="room-card-grid">
+
+<article class="room-card">
+
+<div class="room-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="SamLee Student House 1">
+
+<span class="room-status available">
+Available
+</span>
+
+<span class="room-price">
+From R0 000
+</span>
+
+</div>
+
+<div class="room-content">
+
+<div class="room-tags">
+
+<span>Near UFS / CUT</span>
+<span>NSFAS</span>
+
+</div>
+
 <h3>
 SamLee Student House 1
 </h3>
+
 <p>
-A student accommodation option for students looking for practical housing in Bloemfontein.
+A practical student accommodation option for students who need safe, study-friendly housing in Bloemfontein.
 </p>
-<div class="property-tags">
-<span>Bloemfontein</span>
-<span>Student Housing</span>
-<span>Apply Online</span>
-</div>
-<div class="property-meta-list">
+
+<div class="room-meta">
+
 <div>
-<strong>Suitable For</strong>
-<span>UFS / CUT Students</span>
+<strong>Room Type</strong>
+<span>Private / Shared</span>
 </div>
+
 <div>
-<strong>Funding</strong>
-<span>NSFAS / Private</span>
+<strong>Best For</strong>
+<span>Students Applying Early</span>
 </div>
+
 <div>
 <strong>Status</strong>
-<span>Enquire</span>
+<span>Available</span>
 </div>
-</div>
-<div class="property-card-actions">
-<a class="btn-primary" href="property-1.html">
 
-View Property
+</div>
+
+<div class="room-actions">
+
+<a href="property-1.html"
+class="btn-secondary">
+
+View Details
 
 </a>
-<a class="btn-primary" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Apply
 
 </a>
+
 </div>
+
 </div>
+
 </article>
-<article class="property-list-card">
-<div class="property-list-image">
-<span>Near Student Areas</span>
+
+<article class="room-card">
+
+<div class="room-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="SamLee Student House 2">
+
+<span class="room-status limited">
+Limited
+</span>
+
+<span class="room-price">
+From R0 000
+</span>
+
 </div>
-<div class="property-list-content">
+
+<div class="room-content">
+
+<div class="room-tags">
+
+<span>Student Area</span>
+<span>Study-Friendly</span>
+
+</div>
+
 <h3>
 SamLee Student House 2
 </h3>
+
 <p>
-A student accommodation option for students who need access to campus, transport and student-friendly areas.
+A student accommodation option for students who need access to campus routes, daily services and support.
 </p>
-<div class="property-tags">
-<span>Student Area</span>
-<span>Study-Friendly</span>
-<span>Applications Open</span>
-</div>
-<div class="property-meta-list">
+
+<div class="room-meta">
+
 <div>
-<strong>Suitable For</strong>
+<strong>Room Type</strong>
+<span>Private / Shared</span>
+</div>
+
+<div>
+<strong>Best For</strong>
 <span>First-Year Students</span>
 </div>
-<div>
-<strong>Funding</strong>
-<span>NSFAS / Private</span>
-</div>
+
 <div>
 <strong>Status</strong>
-<span>Enquire</span>
+<span>Limited Space</span>
 </div>
-</div>
-<div class="property-card-actions">
-<a class="btn-primary" href="property-2.html">
 
-View Property
+</div>
+
+<div class="room-actions">
+
+<a href="property-2.html"
+class="btn-secondary">
+
+View Details
 
 </a>
-<a class="btn-primary" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Apply
 
 </a>
+
 </div>
+
 </div>
+
 </article>
-<article class="property-list-card">
-<div class="property-list-image">
-<span>Student Living</span>
+
+<article class="room-card">
+
+<div class="room-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="SamLee Student House 3">
+
+<span class="room-status waiting">
+Waiting List
+</span>
+
+<span class="room-price">
+From R0 000
+</span>
+
 </div>
-<div class="property-list-content">
+
+<div class="room-content">
+
+<div class="room-tags">
+
+<span>Bloemfontein</span>
+<span>Student Living</span>
+
+</div>
+
 <h3>
 SamLee Student House 3
 </h3>
+
 <p>
-A student living option designed for students who want accommodation that supports study, rest and independence.
+A student living option for students comparing accommodation near UFS, CUT and central Bloemfontein.
 </p>
-<div class="property-tags">
-<span>Student Living</span>
-<span>Bloemfontein</span>
-<span>Support</span>
-</div>
-<div class="property-meta-list">
+
+<div class="room-meta">
+
 <div>
-<strong>Suitable For</strong>
-<span>Returning Students</span>
-</div>
-<div>
-<strong>Funding</strong>
-<span>NSFAS / Private</span>
-</div>
-<div>
-<strong>Status</strong>
+<strong>Room Type</strong>
 <span>Enquire</span>
 </div>
-</div>
-<div class="property-card-actions">
-<a class="btn-primary" href="property-3.html">
 
-View Property
+<div>
+<strong>Best For</strong>
+<span>Returning Students</span>
+</div>
+
+<div>
+<strong>Status</strong>
+<span>Waiting List</span>
+</div>
+
+</div>
+
+<div class="room-actions">
+
+<a href="property-3.html"
+class="btn-secondary">
+
+View Details
 
 </a>
-<a class="btn-primary" href="../apply/index.html">
 
-Apply
+<a href="../apply/index.html"
+class="btn-primary">
+
+Join List
 
 </a>
+
 </div>
+
 </div>
+
 </article>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
-<section class="facilities-strip">
+
+<section class="viewing-banner">
+
 <div class="container">
-<div class="facilities-strip-title">
+
+<div class="viewing-banner-inner">
+
+<div>
+
+<span class="eyebrow">
+Book a Viewing
+</span>
+
 <h2>
-What to Look for in Student Accommodation
+Want to View a Property First?
 </h2>
+
 <p>
-Students and parents should compare accommodation carefully before applying.
+Speak to SamLee Estates about viewing times, availability and which accommodation option may suit your campus and funding type.
 </p>
-</div>
-<div class="features-grid">
-<div class="feature-card">
-<h3>
-Safe Environment
-</h3>
-<p>
-Choose accommodation with clear access rules, safety awareness and responsible management.
-</p>
-</div>
-<div class="feature-card">
-<h3>
-Study-Friendly Space
-</h3>
-<p>
-Your accommodation should make it easier to focus, rest and follow an academic routine.
-</p>
-</div>
-<div class="feature-card">
-<h3>
-Campus Access
-</h3>
-<p>
-Accommodation near campus or transport routes can reduce daily pressure.
-</p>
-</div>
-<div class="feature-card">
-<h3>
-Clear Costs
-</h3>
-<p>
-Understand rent, WiFi, electricity, water, transport and other expenses before moving in.
-</p>
-</div>
-</div>
-</div>
-</section>
-<section>
-<div class="container">
-<div class="page-content">
-<h2>
-Browse by Student Need
-</h2>
-<div class="resources-grid">
-<a class="resource-card" href="../accommodation/male-student-accommodation.html">
 
-Male Student Accommodation
+</div>
+
+<div class="viewing-actions">
+
+<a href="https://wa.me/27600000001?text=Hi%20SamLee%20Estates%2C%20I%20want%20to%20book%20a%20viewing%20for%20student%20accommodation."
+class="btn-primary"
+target="_blank"
+rel="noopener">
+
+Book on WhatsApp
 
 </a>
-<a class="resource-card" href="../accommodation/female-student-accommodation.html">
 
-Female Student Accommodation
-
-</a>
-<a class="resource-card" href="../accommodation/first-year-student-accommodation.html">
-
-First-Year Student Accommodation
-
-</a>
-<a class="resource-card" href="../accommodation/postgraduate-student-accommodation.html">
-
-Postgraduate Student Accommodation
-
-</a>
-<a class="resource-card" href="../accommodation/affordable-student-accommodation.html">
-
-Affordable Student Accommodation
-
-</a>
-<a class="resource-card" href="../nsfas/accredited-student-accommodation.html">
-
-NSFAS Accredited Accommodation
-
-</a>
-</div>
-<h2>
-Browse by Area
-</h2>
-<div class="categories-grid">
-<a class="category-card" href="../locations/bloemfontein-student-accommodation.html">
-
-Bloemfontein
-
-</a>
-<a class="category-card" href="../locations/universitas-student-accommodation.html">
-
-Universitas
-
-</a>
-<a class="category-card" href="../locations/park-west-student-accommodation.html">
-
-Park West
-
-</a>
-<a class="category-card" href="../locations/willows-student-accommodation.html">
-
-Willows
-
-</a>
-<a class="category-card" href="../locations/brandwag-student-accommodation.html">
-
-Brandwag
-
-</a>
-<a class="category-card" href="../locations/wesdene-student-accommodation.html">
-
-Wesdene
-
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="facilities-strip">
-<div class="container">
-<div class="page-content">
-<h2>
-How to Apply for a Property
-</h2>
-<div class="property-process">
-<div class="property-process-item">
-<h3>
-Choose Your Preferred Option
-</h3>
-<p>
-Browse the property options, campus pages or area pages to understand what may suit your needs.
-</p>
-</div>
-<div class="property-process-item">
-<h3>
-Submit Your Application
-</h3>
-<p>
-Use the online application form and include your institution, funding type, preferred area and move-in date.
-</p>
-</div>
-<div class="property-process-item">
-<h3>
-Wait for Contact
-</h3>
-<p>
-SamLee Estates will review your details and contact you about suitable accommodation options or next steps.
-</p>
-</div>
-<div class="property-process-item">
-<h3>
-Prepare Documents
-</h3>
-<p>
-Prepare your ID, proof of registration, NSFAS information or other documents where required.
-</p>
-</div>
-</div>
-<p>
-<a class="btn-primary" href="../apply/index.html">
+<a href="../apply/index.html"
+class="btn-outline-light">
 
 Apply Online
 
 </a>
-</p>
+
 </div>
+
 </div>
+
+</div>
+
 </section>
-<section>
+
+<section class="section-light">
+
 <div class="container">
+
 <div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Compare Options
+</span>
+
 <h2>
-Helpful Guides Before Choosing a Property
+Choose Accommodation by Student Need
 </h2>
-<div class="resources-grid">
-<a class="resource-card" href="../guides/how-to-choose-student-accommodation.html">
 
-How to Choose Student Accommodation
-
-</a>
-<a class="resource-card" href="../guides/student-accommodation-vs-residence.html">
-
-Accommodation vs Residence
-
-</a>
-<a class="resource-card" href="../guides/parents-guide-to-student-accommodation.html">
-
-Parents Guide
-
-</a>
-<a class="resource-card" href="../guides/student-safety-guide-bloemfontein.html">
-
-Student Safety Guide
-
-</a>
-<a class="resource-card" href="../guides/university-student-checklist.html">
-
-University Student Checklist
-
-</a>
-<a class="resource-card" href="../guides/what-to-pack-for-student-accommodation.html">
-
-Packing Guide
-
-</a>
 </div>
+
+<p>
+Different students need different support. Browse accommodation pages based on your situation.
+</p>
+
+</div>
+
+<div class="support-path-grid">
+
+<a href="../accommodation/first-year-student-accommodation.html"
+class="support-path-card">
+
+<h3>
+First-Year Students
+</h3>
+
+<p>
+Accommodation guidance for students moving into university life for the first time.
+</p>
+
+<span>
+View Options
+</span>
+
+</a>
+
+<a href="../accommodation/affordable-student-accommodation.html"
+class="support-path-card">
+
+<h3>
+Affordable Accommodation
+</h3>
+
+<p>
+For students comparing practical room options, costs and monthly living needs.
+</p>
+
+<span>
+View Options
+</span>
+
+</a>
+
+<a href="../nsfas/accredited-student-accommodation.html"
+class="support-path-card">
+
+<h3>
+NSFAS Students
+</h3>
+
+<p>
+For students looking for NSFAS accredited accommodation in Bloemfontein.
+</p>
+
+<span>
+View NSFAS Options
+</span>
+
+</a>
+
+<a href="../accommodation/postgraduate-student-accommodation.html"
+class="support-path-card">
+
+<h3>
+Postgraduate Students
+</h3>
+
+<p>
+For students who need a quieter, more stable environment for advanced study.
+</p>
+
+<span>
+View Options
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+All Inclusive Living
+</span>
+
 <h2>
-Frequently Asked Questions
+Facilities Students Usually Ask About
 </h2>
+
+</div>
+
+<p>
+A good property should support studying, rest, safety and daily student routine.
+</p>
+
+</div>
+
+<div class="inclusive-grid">
+
+<div class="inclusive-item">
+
+<span>WiFi</span>
+
+<h3>
+Internet Access
+</h3>
+
+<p>
+For assignments, research, online learning and communication.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Rooms</span>
+
+<h3>
+Furnished Rooms
+</h3>
+
+<p>
+Room setup that supports sleeping, studying and storage.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Study</span>
+
+<h3>
+Study-Friendly Space
+</h3>
+
+<p>
+A better environment for focus, tests and assignments.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Safety</span>
+
+<h3>
+Secure Access
+</h3>
+
+<p>
+Access rules, safe habits and property support.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Kitchen</span>
+
+<h3>
+Shared Kitchen Access
+</h3>
+
+<p>
+Prepare meals and manage daily student living costs.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Laundry</span>
+
+<h3>
+Laundry Access
+</h3>
+
+<p>
+Practical laundry arrangements for students.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>Support</span>
+
+<h3>
+Caretaker Support
+</h3>
+
+<p>
+Property contacts for day-to-day questions and support.
+</p>
+
+</div>
+
+<div class="inclusive-item">
+
+<span>NSFAS</span>
+
+<h3>
+NSFAS Accommodation Focus
+</h3>
+
+<p>
+Support for students looking for NSFAS accredited accommodation.
+</p>
+
+</div>
+
+</div>
+
+<div class="center-action">
+
+<a href="facilities.html"
+class="btn-primary">
+
+View Facilities
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-light">
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+Explore Locations
+</span>
+
+<h2>
+Browse Properties by Area
+</h2>
+
+</div>
+
+<p>
+Search for accommodation around key Bloemfontein student areas connected to UFS, CUT and central student life.
+</p>
+
+</div>
+
+<div class="location-card-grid">
+
+<a href="../locations/universitas-student-accommodation.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Universitas student accommodation">
+
+</div>
+
+<div class="location-content">
+
+<span>Near UFS</span>
+
+<h3>
+Universitas
+</h3>
+
+<p>
+A key student area for students looking for accommodation near UFS.
+</p>
+
+</div>
+
+</a>
+
+<a href="../locations/brandwag-student-accommodation.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Brandwag student accommodation">
+
+</div>
+
+<div class="location-content">
+
+<span>Student Area</span>
+
+<h3>
+Brandwag
+</h3>
+
+<p>
+A practical Bloemfontein area for students comparing campus access and convenience.
+</p>
+
+</div>
+
+</a>
+
+<a href="../locations/willows-student-accommodation.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-1.jpg"
+alt="Willows student accommodation">
+
+</div>
+
+<div class="location-content">
+
+<span>Near CUT</span>
+
+<h3>
+Willows
+</h3>
+
+<p>
+A useful area for students looking for accommodation near CUT and central Bloemfontein.
+</p>
+
+</div>
+
+</a>
+
+<a href="../locations/park-west-student-accommodation.html"
+class="location-card">
+
+<div class="location-image">
+
+<img src="../assets/images/property-2.jpg"
+alt="Park West student accommodation">
+
+</div>
+
+<div class="location-content">
+
+<span>Bloemfontein</span>
+
+<h3>
+Park West
+</h3>
+
+<p>
+A central student-friendly area for students comparing accommodation and transport.
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+<div class="center-action">
+
+<a href="../locations/bloemfontein-student-accommodation.html"
+class="btn-primary">
+
+Explore Areas
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="page-content">
+
+<div class="section-heading split-heading">
+
+<div>
+
+<span class="eyebrow">
+How It Works
+</span>
+
+<h2>
+How to Apply for a Property
+</h2>
+
+</div>
+
+<p>
+The application process helps SamLee Estates understand your student needs before recommending the next step.
+</p>
+
+</div>
+
+<div class="support-path-grid">
+
+<div class="support-path-card">
+
+<h3>
+1. Choose a Property or Area
+</h3>
+
+<p>
+Browse the property cards, campus pages or location pages to see what may suit you.
+</p>
+
+<span>
+Start Browsing
+</span>
+
+</div>
+
+<div class="support-path-card">
+
+<h3>
+2. Submit Your Application
+</h3>
+
+<p>
+Send your details through the online application form so your enquiry can be recorded properly.
+</p>
+
+<span>
+Apply Online
+</span>
+
+</div>
+
+<div class="support-path-card">
+
+<h3>
+3. Wait for Follow-Up
+</h3>
+
+<p>
+SamLee Estates can contact you about availability, room options, documents and next steps.
+</p>
+
+<span>
+Prepare Details
+</span>
+
+</div>
+
+<div class="support-path-card">
+
+<h3>
+4. Prepare to Move In
+</h3>
+
+<p>
+Prepare your documents, packing list, budget, house rules and student living essentials.
+</p>
+
+<span>
+Get Ready
+</span>
+
+</div>
+
+</div>
+
+<div class="center-action">
+
+<a href="../apply/index.html"
+class="btn-primary">
+
+Apply Online
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq-preview-section">
+
+<div class="container">
+
+<div class="section-heading centered-heading">
+
+<span class="eyebrow">
+Property FAQs
+</span>
+
+<h2>
+Questions Before Choosing a Property
+</h2>
+
+<p>
+Quick answers about availability, facilities, NSFAS accommodation and applying for student accommodation.
+</p>
+
+</div>
+
+<div class="faq-tabs" data-tabs>
+
+<div class="faq-tab-buttons">
+
+<button class="active" data-tab-button="availability">
+Availability
+</button>
+
+<button data-tab-button="facilities">
+Facilities
+</button>
+
+<button data-tab-button="nsfas">
+NSFAS
+</button>
+
+<button data-tab-button="viewing">
+Viewing
+</button>
+
+</div>
+
+<div class="faq-tab-panel active" data-tab-panel="availability">
+
 <div class="faq-grid">
+
 <div class="faq-card">
+
 <div class="faq-question">
-How do I apply for a SamLee Estates property?
+Are rooms currently available?
 </div>
+
 <div class="faq-answer">
-Use the online application form and provide your personal details, institution, funding type, preferred area and move-in date.
+Availability can change during busy periods. Apply online or contact SamLee Estates on WhatsApp to ask about the latest room status.
 </div>
+
 </div>
+
 <div class="faq-card">
-<div class="faq-question">
-Does SamLee Estates offer accommodation near UFS?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides student accommodation support for students studying near the University of the Free State.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Does SamLee Estates offer accommodation near CUT?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides student accommodation support for students studying near the Central University of Technology.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Is SamLee Estates NSFAS accredited?
-</div>
-<div class="faq-answer">
-Yes. SamLee Estates provides NSFAS accredited student accommodation in Bloemfontein.
-</div>
-</div>
-<div class="faq-card">
-<div class="faq-question">
-Can parents ask about property options?
-</div>
-<div class="faq-answer">
-Yes. Parents and guardians can contact SamLee Estates to ask about location, safety, house rules, applications and student accommodation support.
-</div>
-</div>
-<div class="faq-card">
+
 <div class="faq-question">
 Should I apply early?
 </div>
+
 <div class="faq-answer">
-Yes. Students should apply as early as possible before registration season because accommodation demand increases before the academic year begins.
+Yes. Students should apply early because accommodation demand increases before registration season.
 </div>
+
 </div>
+
 </div>
+
 </div>
+
+<div class="faq-tab-panel" data-tab-panel="facilities">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+What facilities should I ask about?
 </div>
+
+<div class="faq-answer">
+Ask about WiFi, room furniture, kitchen access, laundry, bathroom access, electricity, water, safety and house rules.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Are the rooms furnished?
+</div>
+
+<div class="faq-answer">
+Room setup may differ by property. Confirm what is included before finalising accommodation.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="nsfas">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+Is SamLee Estates NSFAS accredited?
+</div>
+
+<div class="faq-answer">
+Yes. SamLee Estates provides NSFAS accredited student accommodation in Bloemfontein.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can NSFAS students apply for these properties?
+</div>
+
+<div class="faq-answer">
+Yes. NSFAS-funded students can apply online and select NSFAS as their funding type.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="faq-tab-panel" data-tab-panel="viewing">
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can I book a viewing?
+</div>
+
+<div class="faq-answer">
+Yes. Use the WhatsApp booking link or contact SamLee Estates to ask about viewing arrangements.
+</div>
+
+</div>
+
+<div class="faq-card">
+
+<div class="faq-question">
+Can parents attend a viewing?
+</div>
+
+<div class="faq-answer">
+Yes. Parents and guardians can ask questions about safety, location, costs, house rules and facilities.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="center-action">
+
+<a href="../faq/index.html"
+class="btn-primary">
+
+View All FAQs
+
+</a>
+
+</div>
+
+</div>
+
 </section>
+
 <section class="cta">
+
 <div class="container">
+
 <h2>
 Ready to Apply for Student Accommodation?
 </h2>
+
 <p>
-Submit your details and take the next step toward securing student accommodation in Bloemfontein near UFS or CUT.
+Submit your details and take the next step toward securing student accommodation near UFS or CUT in Bloemfontein.
 </p>
-<a class="btn-primary" href="../apply/index.html">
+
+<a href="../apply/index.html"
+class="btn-primary">
 
 Start Application
 
 </a>
+
 </div>
+
 </section>
-</main><footer class="footer">
+
+<footer class="footer">
+
 <div class="container">
+
 <div class="footer-grid">
+
 <div>
+
 <h3>SamLee Estates</h3>
+
 <p>
 Student accommodation in Bloemfontein near UFS and CUT.
 </p>
+
 </div>
+
 <div>
+
 <h4>Properties</h4>
+
 <ul>
+
 <li><a href="index.html">All Properties</a></li>
 <li><a href="facilities.html">Facilities</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="../apply/index.html">Apply Online</a></li>
+
 </ul>
+
 </div>
+
 <div>
+
 <h4>Accommodation</h4>
+
 <ul>
+
 <li><a href="../ufs/student-accommodation-near-ufs.html">Near UFS</a></li>
 <li><a href="../cut/student-accommodation-near-cut.html">Near CUT</a></li>
 <li><a href="../nsfas/accredited-student-accommodation.html">NSFAS Accredited</a></li>
 <li><a href="../guides/how-to-choose-student-accommodation.html">How to Choose</a></li>
+
 </ul>
+
 </div>
+
 </div>
+
 <div class="footer-bottom">
+
 <p>
 © <span class="current-year"></span> SamLee Estates. All Rights Reserved.
 </p>
+
 </div>
+
 </div>
+
 </footer>
-<script defer="" src="../assets/js/main.js"></script>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/components.js"></script>
+
 </body>
+
 </html>
